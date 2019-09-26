@@ -1,2 +1,7 @@
 ---
 # handlers file for bind-role-user
+  - name: 'resumen de error'
+    debug: 
+     msg: 
+       - " Mensaje de salida: {{ out.stderr }}"
+       - " Consejo: 'oc login https:master-api.my.org'"

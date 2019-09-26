@@ -1,0 +1,8 @@
+  - name: Quien soy
+    command: oc whoami
+    register: out
+    - fail:
+        msg:
+          - "out.stderr"
+          - "Consejo: 'oc login https://master-api.my.org'"
+      when: "'error' in out.stderr"
